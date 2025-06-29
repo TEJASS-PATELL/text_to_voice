@@ -1,0 +1,168 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Comic Relief', sans-serif;
+  }
+
+  body {
+      background-color: #f0f0f0;
+      /* Off-white background for a softer look */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+  }
+
+  /* --- Main Container --- */
+  .hero {
+      width: 100%;
+      max-width: 700px;
+      background-color: #ffffff;
+      /* Pure white container */
+      border: 1px solid #e0e0e0;
+      /* Subtle border */
+      padding: 40px 40px;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      /* Adjusted gap */
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+  }
+
+  /* --- Heading --- */
+  h1 {
+      font-size: 2.35rem;
+      /* 36px */
+      font-weight: 600;
+      color: #000000;
+      text-align: center;
+      line-height: 1.2;
+  }
+
+  h1 span {
+      font-weight: 300;
+      /* Lighter font weight for the second word */
+      color: #000000;
+  }
+
+  /* --- Textarea --- */
+  textarea {
+      width: 100%;
+      min-height: 200px;
+      padding: 15px;
+      background-color: #ffffff;
+      border: 1px solid #dcdcdc;
+      border-radius: 8px;
+      color: #000000;
+      font-size: 1.25rem;
+      font-weight: 400;
+      resize: vertical;
+      /* Allow vertical resize only */
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  textarea::placeholder {
+      color: #aaaaaa;
+  }
+
+  textarea:focus {
+      border-color: #000000;
+  }
+
+  /* --- Controls Row (Select & Button) --- */
+  .row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+  }
+
+  /* --- Custom Select Dropdown --- */
+  select {
+      flex-grow: 1;
+      /* Takes up available space */
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      outline: none;
+      background-color: #ffffff;
+      color: #000000;
+      border: 1px solid #dcdcdc;
+      padding: 16px 10px 16px 20px;
+      border-radius: 8px;
+      font-size: 1.15rem;
+      font-weight: 500;
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 15px center;
+      transition: border-color 0.3s ease;
+  }
+
+  select:hover {
+      border-color: #999999;
+  }
+
+  select:focus {
+      border-color: #000000;
+  }
+
+  /* --- Listen Button --- */
+  .hero button {
+      background-color: white;
+      color: #000000;
+      padding: 7px;
+      border: 1px solid #dcdcdc;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+
+  .hero button:active {
+      transform: scale(0.98);
+  }
+
+  .play-icon {
+      width: 50px;
+      height: 50px;
+      vertical-align: middle;
+  }
+
+
+  .listen-btn:disabled {
+      background-color: #555;
+      cursor: not-allowed;
+  }
+
+  /* --- Responsive Design --- */
+  @media (max-width: 640px) {
+      .hero {
+          padding: 25px;
+          gap: 20px;
+      }
+
+      h1 {
+          font-size: 1.8rem;
+          /* 28px */
+      }
+
+      .row,
+      .gemini-row {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 15px;
+      }
+
+      .listen-btn,
+      .gemini-btn {
+          justify-content: center;
+      }
+  }
