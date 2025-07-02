@@ -83,7 +83,7 @@
 
   /* --- Custom Select Dropdown --- */
   select {
-      flex-grow: 1;
+      width: 550px;
       /* Takes up available space */
       appearance: none;
       -webkit-appearance: none;
