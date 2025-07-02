@@ -1,3 +1,4 @@
+const textarea = document.getElementsByClassName("textarea")[0];
 let speech = new SpeechSynthesisUtterance();
 //!  The SpeechSynthesisUtterance represents a speech request. It contains the content that the speech service should read and information about how to read it (e.g., language, pitch, and volume).
 
@@ -17,6 +18,11 @@ voiceselect.addEventListener("change", () =>{
 })
 
 document.querySelector("button").addEventListener("click",function(){
-    speech.text = document.querySelector("textarea").value;
-    window.speechSynthesis.speak(speech);
+    if(!textarea.value){
+        return alert('Enter Text');
+    }
+    else{
+        speech.text = document.querySelector("textarea").value;
+        window.speechSynthesis.speak(speech);
+    }
 })
