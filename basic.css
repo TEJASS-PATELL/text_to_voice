@@ -43,9 +43,9 @@
   }
 
   h1 span {
-      font-weight: 600;
+      font-weight: 900;
       /* Lighter font weight for the second word */
-      color: #676767;
+      color: #00ccff;
   }
 
   /* --- Textarea --- */
